@@ -17,14 +17,21 @@ public class Courses {
         this.students = new ArrayList<>();
     }
 
-    // Método inscripción de estudiante + sobrecarga de método multip. estudiantes
+ // Método inscripción de 1 estudiante
+    public void enroll(Student student) {
+        students.add(student);
+        System.out.println(student.firstName + " " + student.lastName +
+                         " ha sido inscrito en " + courseName);
+    }
+
+    // Método inscripción de MÚLTIPLES estudiantes (sobrecarga)
     public void enroll(Student[] studentsArray) {
         for (Student student : studentsArray) {
             students.add(student);
-            System.out.println(student.firstName + " " + student.lastName + 
+            System.out.println(student.firstName + " " + student.lastName +
                              " ha sido inscrito en " + courseName);
         }
-        System.out.println("Total de " + studentsArray.length + 
+        System.out.println("Total de " + studentsArray.length +
                          " estudiantes inscritos mediante arreglo");
     }
 
